@@ -36,10 +36,10 @@ public class GraphicApplication2 extends JFrame{
 		// Asignar panel de la ventana
 		setContentPane(contentPane);
 
-		Film();
+		film();
 	}
 
-	public void Film() {
+	public void film() {
 		// Etiqueta anadir pelicula
 		JLabel labelInsertFilm = new JLabel("Escribe el titulo de una pelicula");
 		labelInsertFilm.setBounds(40,22,200,20);
