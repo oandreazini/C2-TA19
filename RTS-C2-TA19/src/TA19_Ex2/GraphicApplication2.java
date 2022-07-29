@@ -1,7 +1,6 @@
 package TA19_Ex2;
 
 import java.awt.*;
-import javax.swing.JTextField;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -37,10 +36,10 @@ public class GraphicApplication2 extends JFrame{
 		// Asignar panel de la ventana
 		setContentPane(contentPane);
 
-		hiContent();
+		Film();
 	}
 
-	public void hiContent() {
+	public void Film() {
 		// Etiqueta añadir pelicula
 		JLabel labelFilm = new JLabel("Escribe el título de una película");
 		labelFilm.setBounds(40,22,200,20);
@@ -50,15 +49,37 @@ public class GraphicApplication2 extends JFrame{
 		JTextField nameTextField  = new JTextField();
 		nameTextField.setBounds(60, 67, 120, 20);
 		contentPane.add(nameTextField);
-
+		
+		JComboBox comboBox = new JComboBox();
+		comboBox.setBounds(415, 67, 29, 21);
+		contentPane.add(comboBox);
+		
+		JLabel lblNewLabel = new JLabel("Películas");
+		lblNewLabel.setBounds(358, 26, 45, 13);
+		contentPane.add(lblNewLabel);
+		
 		// Creamos el boton para anadir
 		Button addButton = new Button("Añadir");
 
+		// Creamos un listener para la accion de pulsar el boton
+		ActionListener actLis = new ActionListener() {
+			// Creamos una accion a realizar cuando se pulse el boton
+			public void actionPerformed(ActionEvent hiEvent) {
+				// Extraemos el nombre introducido
+				String name = nameTextField.getText();
+				
+				comboBox.addItem(name);
+				
+			}
+		};
 		
+		addButton.addActionListener(actLis);
 	
 
 		addButton.setBounds(40, 132, 89, 29);
 		contentPane.add(addButton);
+		
+		
 	}
 }
 
