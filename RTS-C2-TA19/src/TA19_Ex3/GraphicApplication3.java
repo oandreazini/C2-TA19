@@ -133,8 +133,8 @@ public class GraphicApplication3 extends JFrame {
 			int timePc = slider.getValue();
 						
 			// Mostramos el saludo al nombre en otra ventana
-			JOptionPane.showMessageDialog(null, "El sistema operativo que elegiste es " +resultSistem+ " y las habilidades son " +resultHabilitis +
-					resultHabilitis_1 +  resultHabilitis_2 +" y las horas dedicadas al PC son: " +timePc);
+			JOptionPane.showMessageDialog(null, "El sistema operativo que elegiste es " +resultSistem+ " y las habilidades son " +resultHabilitis +" "
+					+ resultHabilitis_1 + " " +  resultHabilitis_2 +" y las horas dedicadas al PC son: " +timePc);
 			System.exit(0);
 			}
 		};
